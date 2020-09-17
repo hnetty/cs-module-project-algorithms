@@ -4,12 +4,14 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    nums = set()
+
     for i in arr:
-        for j in arr:
-            if j == i:
-                pass
-            else:
-                return i
+        if i in nums:
+            nums.remove(i)
+        else:
+            nums.add(i)
+    return nums.pop()
 
     
 
